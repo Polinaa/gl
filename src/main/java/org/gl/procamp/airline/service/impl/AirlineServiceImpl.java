@@ -1,9 +1,11 @@
-package org.gl.procamp.airline.service;
+package org.gl.procamp.airline.service.impl;
 
 import org.gl.procamp.airline.model.Aircraft;
 import org.gl.procamp.airline.model.Airline;
+import org.gl.procamp.airline.service.AirlineService;
 import org.gl.procamp.airline.util.AircraftSorting;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class AirlineServiceImpl implements AirlineService {
@@ -23,5 +25,12 @@ public class AirlineServiceImpl implements AirlineService {
         List <Aircraft> aircrafts = airline.getAircrafts();
         aircrafts.sort(sortBy.getComparator());
         return aircrafts;
+    }
+
+    @Override
+    public List<Aircraft> getlAircraftsByFuelConsumption(Airline airline, double minFuelConsumption,
+                                                         double maxFuelConsumption) {
+        return airline.getAircrafts().stream().filter(a -> minFuelConsumption >= a.getFuelConsumtion && a.getFuelConsumtion() >= minFuelConsumption).collect(
+            Arrays.asList());
     }
 }

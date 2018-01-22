@@ -11,5 +11,7 @@ public interface AirlineService {
     public double countTotalCapacity(Airline airline);
     public double countCarryingCapacity(Airline airline);
     public List<Aircraft> getAllAircrafts(Airline airline, AircraftSorting sortBy);
+    public List<Aircraft> getlAircraftsByFuelConsumption(Airline airline, double minFuelConsumption, double maxFuelConsumption);
+
 
 }

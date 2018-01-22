@@ -8,7 +8,7 @@ import java.util.Comparator;
 @Getter
 public enum AircraftSorting {
 
-    BY_FLIGHT_RANGE ((e1, e2) -> Double.compare(
+    BY_FLIGHT_RANGE_DESC ((e1, e2) -> Double.compare(
             e1.getFlightRange(), e2.getFlightRange()));
 
     private Comparator<Aircraft> comparator;
