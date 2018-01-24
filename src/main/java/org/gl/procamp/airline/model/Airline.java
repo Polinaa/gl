@@ -8,9 +8,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 public class Airline {
+
     private List<Aircraft> aircrafts;
 
-    public void addAircraft(Aircraft aircraft) {
-        aircrafts.add(aircraft);
-    }
 }

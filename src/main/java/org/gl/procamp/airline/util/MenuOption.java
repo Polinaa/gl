@@ -16,7 +16,8 @@ public enum MenuOption {
 
     private String message;
 
-    private static final String SEPARATOR = "-----------------------------------\n";
+    private static final String WELCOME_MESSAGE = "\nEnter one of the options:\n";
+    private static final String SEPARATOR = "--------------------------------\n";
     private static final String MENU_OPTION_FORMAT = "%d. %s\n";
 
     MenuOption(int optionNumber, String message) {
@@ -33,9 +34,8 @@ public enum MenuOption {
 
     public static StringBuilder getMenuMessage() {
         StringBuilder menuMessage = new StringBuilder();
-        menuMessage.append(SEPARATOR);
-        Arrays.stream(MenuOption.values())
-                .forEach(option -> menuMessage.append(String.format(MENU_OPTION_FORMAT, option.getOptionNumber(), option.getMessage())));
+        menuMessage.append(WELCOME_MESSAGE).append(SEPARATOR);
+        Arrays.stream(MenuOption.values()).forEach(option -> menuMessage.append(String.format(MENU_OPTION_FORMAT, option.getOptionNumber(), option.getMessage())));
         menuMessage.append(SEPARATOR);
         return menuMessage;
     }

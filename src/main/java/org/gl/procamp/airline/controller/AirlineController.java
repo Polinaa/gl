@@ -43,6 +43,7 @@ public class AirlineController {
             } while (command != MenuOption.EXIT);
         } catch (Exception e) {
             terminalIO.println(e);
+            run();
         }
     }
 

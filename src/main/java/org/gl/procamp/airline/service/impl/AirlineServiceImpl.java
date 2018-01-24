@@ -5,7 +5,6 @@ import org.gl.procamp.airline.model.Airline;
 import org.gl.procamp.airline.service.AirlineService;
 import org.gl.procamp.airline.util.AircraftSorting;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
