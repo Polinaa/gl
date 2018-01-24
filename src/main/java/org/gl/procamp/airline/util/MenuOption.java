@@ -12,13 +12,14 @@ public enum MenuOption {
     FIND_AIRPLANE_BY_FUEL_CONSUMPTION(4, "Find airplane by fuel consumption"),
     EXIT(5, "EXIT");
 
-    private int optionNumber;
-
-    private String message;
-
     private static final String WELCOME_MESSAGE = "\nEnter one of the options:\n";
     private static final String SEPARATOR = "--------------------------------\n";
     private static final String MENU_OPTION_FORMAT = "%d. %s\n";
+    public static final String ENTER_MIN_DOUBLE_MESSAGE = "Enter min range:";
+    public static final String ENTER_MAX_DOUBLE_MESSAGE = "Enter max range:";
+
+    private int optionNumber;
+    private String message;
 
     MenuOption(int optionNumber, String message) {
         this.optionNumber = optionNumber;
