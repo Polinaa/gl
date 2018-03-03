@@ -1,6 +1,6 @@
-Launch app from terminal:
+Launch from the terminal:
 
-    1. Run from the root directory
+    1. Run in the root directory
             mvn clean install
     2. Move to the target folder
             cd target
