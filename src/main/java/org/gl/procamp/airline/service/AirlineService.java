@@ -8,8 +8,9 @@ import java.util.List;
 
 public interface AirlineService {
 
-    public double countTotalCapacity(Airline airline);
-    public double countCarryingCapacity(Airline airline);
-    public List<Aircraft> getAllAircrafts(Airline airline, AircraftSorting sortBy);
-    public List<Aircraft> getlAircraftsByFuelConsumption(Airline airline, double minFuelConsumption, double maxFuelConsumption);
+    double countTotalCapacity(Airline airline);
+    double countCarryingCapacity(Airline airline);
+    List<Aircraft> getAllAircrafts(Airline airline, AircraftSorting sortBy);
+    List<Aircraft> getlAircraftsByFuelConsumption(Airline airline, double minFuelConsumption, double maxFuelConsumption);
+    List<Airline> getAllAirlines();
 }

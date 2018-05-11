@@ -13,7 +13,7 @@ public enum AircraftSorting {
 
     private Comparator<Aircraft> comparator;
 
-    private AircraftSorting(Comparator<Aircraft> comparator) {
+    AircraftSorting(Comparator<Aircraft> comparator) {
         this.comparator = comparator;
     }
 }
